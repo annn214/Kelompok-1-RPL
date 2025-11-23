@@ -9,19 +9,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository    #Mengambil isi repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Setup Node.js          #Menyiapkan lingkungan Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install dependencies   #Menginstal dependensi proyek
         run: npm install
 
-      - name: Run linter
+      - name: Run linter             #Menjalankan linter untuk cek kualitas kode
         run: npm run lint || echo "Linter not configured"
 
-      - name: Run tests (none available)
+      - name: Run tests (none available)  #Menjalankan unit test (placeholder)
         run: echo "No tests available"
